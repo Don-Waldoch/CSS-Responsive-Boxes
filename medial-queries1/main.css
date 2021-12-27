@@ -1,3 +1,42 @@
 body {
   background: blanchedalmond;
 }
+
+.container { 
+  display: flex;
+  min-height: 96vh;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 10vh;
+  background-color: #ffcc81;
+  margin: 10px;
+}
+
+.a::before{content: "a"}
+.b::before{content: "b"}
+.c::before{content: "c"}
+
+.a, .c {
+  flex-grow: 1;
+}
+
+.b {
+  flex-grow: 3;
+}
+
+@media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .a {
+    width: 100%;
+  }
+}
